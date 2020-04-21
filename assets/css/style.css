@@ -1,1 +1,67 @@
+body {
+  height: 97vh;
+  background-image: url("../images/lfz-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+h1 {
+  font-size: 3rem;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.header {
+  margin: auto;
+  text-align: center;
+}
+
+.stats {
+  background-color: rgb(13, 133, 33);
+  height: 14%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 100%;
+}
+
+.aside {
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2%;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.card {
+  background-image: url("../images/lfz-card.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 33%;
+  margin-left: .2%;
+  margin-right: .2%;
+  margin-bottom: 1.5%;
+
+}
