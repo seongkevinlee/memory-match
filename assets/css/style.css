@@ -18,13 +18,13 @@ h1 {
 
 .stats {
   background-color: rgb(13, 133, 33);
-  height: 65px;
+  height: 14%;
   margin-top: 6px;
   margin-bottom: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -59,7 +59,7 @@ h1 {
   background-image: url("../images/lfz-card.jpg");
   background-size: cover;
   background-position: center;
-  height: 26%;
+  height: 33%;
   margin-left: .2%;
   margin-right: .2%;
   margin-bottom: 1.5%;
