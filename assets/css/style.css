@@ -25,6 +25,7 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .grid-row {
@@ -58,10 +59,9 @@ h1 {
   background-image: url("../images/lfz-card.jpg");
   background-size: cover;
   background-position: center;
-  height: 23%;
+  height: 26%;
   margin-left: .2%;
   margin-right: .2%;
-  margin-top: 1.5%;
   margin-bottom: 1.5%;
 
 }
