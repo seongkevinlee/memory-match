@@ -6,7 +6,27 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
-
+var cardFrontArray = [
+  "react-logo",
+  "react-logo",
+  "php-logo",
+  "php-logo",
+  "node-logo",
+  "node-logo",
+  "mysql-logo",
+  "mysql-logo",
+  "html-logo",
+  "html-logo",
+  "github-logo",
+  "github-logo",
+  "js-logo",
+  "js-logo",
+  "css-logo",
+  "css-logo",
+  "docker-logo",
+  "docker-logo",
+];
+var cardFronts = document.querySelectorAll(".card-front");
 var gameCards = document.querySelector('#gameCards');
 
 
@@ -80,8 +100,27 @@ function resetGame() {
 }
 
 function resetCards() {
-  var hiddenCards = document.querySelectorAll('.card-back')
+  shuffleCards();
+  displayCards();
+  var hiddenCards = document.querySelectorAll('.card-back');
   for(var i = 0 ; i < hiddenCards.length ; i++) {
     hiddenCards[i].classList.remove('hidden');
     }
   }
+
+
+
+
+
+function shuffleCards() {
+  for (let i = cardFrontArray.length - 1 ; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+    [cardFrontArray[i], cardFrontArray[j]] = [cardFrontArray[j], cardFrontArray[i]];
+  }
+}
+
+function displayCards() {
+  for(var i = 0 ; i < cardFronts.length ; i++) {
+    cardFronts[i].className = 'card-front ' + cardFrontArray[i];
+  }
+}
