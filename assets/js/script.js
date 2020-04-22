@@ -7,7 +7,8 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 
-var gameCards = document.querySelector("#gameCards");
+var gameCards = document.querySelector('#gameCards');
+
 
 gameCards.addEventListener('click', handleClick);
 function handleClick(event) {
@@ -24,14 +25,12 @@ function handleClick(event) {
     secondCardClasses = secondCardClicked.previousElementSibling.className;
     gameCards.removeEventListener('click', handleClick);
     attempts++;
-    console.log("attempts:", attempts);
 
     if(firstCardClasses === secondCardClasses) {
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       matches++;
-      console.log("matches:", matches)
       if(matches === maxMatches) {
         var modal = document.querySelector(".modal")
         modal.classList.remove("hidden");
@@ -61,5 +60,28 @@ function displayStats() {
 }
 
 function calculateAccuracy(attempts, matches) {
+  if(!attempts) {
+    return "0%";
+  }
   return Math.trunc(matches / attempts * 100) + "%";
 }
+
+//PLAY AGAIN BUTTON
+var playAgain = document.querySelector("#play-again");
+playAgain.addEventListener('click', resetGame);
+
+function resetGame() {
+  matches = 0;
+  attempts = 0;
+  gamesPlayed++;
+  displayStats();
+  resetCards();
+  document.querySelector(".modal").classList.add('hidden');
+}
+
+function resetCards() {
+  var hiddenCards = document.querySelectorAll('.card-back')
+  for(var i = 0 ; i < hiddenCards.length ; i++) {
+    hiddenCards[i].classList.remove('hidden');
+    }
+  }
