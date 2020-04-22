@@ -28,6 +28,9 @@ var cardFrontArray = [
 ];
 var cardFronts = document.querySelectorAll(".card-front");
 var gameCards = document.querySelector('#gameCards');
+var startButton = document.querySelector('.startGame');
+
+startButton.addEventListener('click', createCards);
 
 gameCards.addEventListener('click', handleClick);
 function handleClick(event) {
@@ -116,4 +119,30 @@ function displayCards() {
   for(var i = 0 ; i < cardFronts.length ; i++) {
     cardFronts[i].className = 'card-front ' + cardFrontArray[i];
   }
+}
+
+
+function createCards() {
+  document.querySelector('.startModal').classList.add('hidden');
+  shuffleCards()
+  for(var i = 0 ; i < maxMatches * 2 ; i++) {
+    var cardContainer = document.createElement('div');
+    cardContainer.className = "card col-2";
+    var cardFront = createFrontCard(cardFrontArray[i]);
+    var cardBack = createBackCard();
+    cardContainer.append(cardFront, cardBack);
+    gameCards.append(cardContainer);
+  }
+}
+
+function createFrontCard(className) {
+  var frontCard = document.createElement('div');
+  frontCard.classList.add("card-front", className);
+  return frontCard;
+}
+
+function createBackCard() {
+  var backCard = document.createElement('div');
+  backCard.classList.add("card-back");
+  return backCard;
 }

@@ -5,11 +5,12 @@ body {
   background-repeat: no-repeat;
 }
 
-h1 {
+.title {
   font-size: 3rem;
   margin-top: 2px;
   margin-bottom: 5px;
 }
+
 
 .modal {
   width: 36%;
@@ -20,10 +21,36 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 3rem;
   padding-top: 2rem;
   border-radius: 7px;
   color: rgb(255, 255, 255);
+}
+.modal-text {
+  font-size: 2.6rem;
+  color: rgb(255, 255, 255);
+}
+.startModal {
+  width: 36%;
+  height: 28%;
+  position: fixed;
+  background-color: rgb(13, 133, 33);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 5rem;
+  padding-top: 12px;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+}
+.startGame {
+  width: 74%;
+  height: 72%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 #play-again {
