@@ -13,6 +13,10 @@ body {
 
 
 .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 36%;
   height: 33%;
   position: fixed;
@@ -21,15 +25,22 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  line-height: 0;
   padding-top: 2rem;
   border-radius: 7px;
   color: rgb(255, 255, 255);
+}
+.modal-offset {
+  padding-bottom: 11px;
 }
 .modal-text {
   font-size: 2.6rem;
   color: rgb(255, 255, 255);
 }
 .startModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 36%;
   height: 28%;
   position: fixed;
