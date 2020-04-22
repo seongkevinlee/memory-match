@@ -29,7 +29,6 @@ var cardFrontArray = [
 var cardFronts = document.querySelectorAll(".card-front");
 var gameCards = document.querySelector('#gameCards');
 
-
 gameCards.addEventListener('click', handleClick);
 function handleClick(event) {
   if(event.target.className.indexOf('card-back') === -1) {
@@ -65,8 +64,6 @@ function handleClick(event) {
       }, 1500);
     }
     displayStats();
-
-
   }
 }
 
@@ -107,10 +104,6 @@ function resetCards() {
     hiddenCards[i].classList.remove('hidden');
     }
   }
-
-
-
-
 
 function shuffleCards() {
   for (let i = cardFrontArray.length - 1 ; i > 0; i--) {
