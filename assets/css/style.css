@@ -11,6 +11,21 @@ h1 {
   margin-bottom: 5px;
 }
 
+.modal {
+  width: 36%;
+  height: 24%;
+  position: fixed;
+  background-color: rgb(13, 133, 33);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+}
+
 .header {
   margin: auto;
   text-align: center;
