@@ -51,6 +51,7 @@ h1 {
   align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
+  border-radius: 7px;
 }
 
 .grid-row {
@@ -89,6 +90,7 @@ h1 {
   margin-right: .2%;
   margin-bottom: 1.5%;
   position: relative;
+border-radius: 7px;
 
 }
 
@@ -99,6 +101,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  border-radius: 7px;
 }
 
 .card-back {
