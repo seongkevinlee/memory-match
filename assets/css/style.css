@@ -4,13 +4,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .title {
   font-size: 3rem;
   margin-top: 2px;
   margin-bottom: 5px;
 }
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -36,7 +34,6 @@ body {
   font-size: 2.6rem;
   color: rgb(255, 255, 255);
 }
-
 .startModal {
   display: flex;
   justify-content: center;
@@ -63,7 +60,6 @@ body {
   font-weight: 600;
   font-size: 3rem;
 }
-
 #play-again {
   width: 27%;
   height: 17%;
@@ -72,12 +68,10 @@ body {
   border-radius: 7px;
   font-weight: 600;
 }
-
 .header {
   margin: auto;
   text-align: center;
 }
-
 .stats {
   background-color: rgb(13, 133, 33);
   height: 14%;
@@ -90,25 +84,21 @@ body {
   font-weight: 600;
   border-radius: 7px;
 }
-
 .grid-row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .game {
   height: 100%;
 }
-
 .aside {
   height: 100%;
   flex-direction: column;
   align-items: flex-start;
   padding: 2%;
 }
-
 .main {
   height: 100%;
   display: flex;
@@ -118,7 +108,6 @@ body {
   margin: 0 auto;
   padding-top: 3rem;
 }
-
 .card {
   background-image: url("../images/lfz-card.jpg");
   background-size: cover;
@@ -130,7 +119,6 @@ body {
   position: relative;
   border-radius: 7px;
 }
-
 .card-front,
 .card-back {
   height: 100%;
@@ -141,11 +129,9 @@ body {
   position: absolute;
   border-radius: 7px;
 }
-
 .card-back {
   background-image: url("../images/lfz-card.jpg");
 }
-
 .js-logo {
   background-image: url("../images/js-logo.png");
 }

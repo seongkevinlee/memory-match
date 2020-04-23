@@ -26,6 +26,7 @@ var cardFrontArray = [
   "docker-logo",
   "docker-logo",
 ];
+
 var cardFronts = document.querySelectorAll(".card-front");
 var gameCards = document.querySelector("#gameCards");
 var startButton = document.querySelector(".startGame");
