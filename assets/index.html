@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Memory Match - Seong Kevin Lee</title>
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="row header">
-      <header class="header">
-        <h1 class="title">LFZ Memory Match</h1>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memory Match - Seong Kevin Lee</title>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <header class="header">
+          <h1 class="title">LFZ Memory Match</h1>
+        </header>
+      </div>
+
+      <div class="row game">
+        <aside class="col-2 aside">
+          <div class="stats">Stats</div>
+          <div class="stats">Games Played</div>
+          <div class="stats" id="gamesPlayed">0</div>
+          <div class="stats">Attempts</div>
+          <div class="stats" id="attempts">0</div>
+          <div class="stats">Accuracy</div>
+          <div class="stats" id="accuracy">0</div>
+        </aside>
+        <main class="col-10 main" id="gameCards"></main>
+      </div>
+    </div>
+    <div class="startModal">
+      <button class="startGame">START GAME</button>
+    </div>
+    <div class="modal hidden">
+      <h1 class="modal-text">Congratulations!</h1>
+      <h1 class="modal-text">You have Won!</h1>
+      <div class="modal-offset"></div>
+      <button id="play-again">Play Again?</button>
     </div>
 
-    <div class="row game">
-      <aside class="col-2 aside">
-        <div class="stats">Stats</div>
-        <div class="stats">Games Played</div>
-        <div class="stats" id="gamesPlayed">0</div>
-        <div class="stats">Attempts</div>
-        <div class="stats" id="attempts">0</div>
-        <div class="stats">Accuracy</div>
-        <div class="stats" id="accuracy">0</div>
-      </aside>
-      <main class="col-10 main" id="gameCards">
-      </main>
-    </div>
-  </div>
-  <div class="startModal">
-    <button class="startGame">START GAME</button>
-  </div>
-  <div class="modal hidden">
-    <h1 class="modal-text">Congratulations!</h1>
-    <h1 class="modal-text">You have Won!</h1>
-    <div class="modal-offset"></div>
-    <button id="play-again">Play Again?</button>
-  </div>
-
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
