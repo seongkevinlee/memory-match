@@ -4,35 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Memory Match - Seong Kevin Lee</title>
+    <title>Café Bon Appétit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <!-- <link rel="stylesheet" href="css/media.css" /> -->
   </head>
   <body>
 
     <div class="container">
       <div class="row header">
         <header class="header">
-          <h1 class="title">LFZ Memory Match</h1>
+          <h1 class="title">Café Bon Appétit</h1>
         </header>
       </div>
-
-      <div class="row game">
-        <aside class="col-2 aside">
-          <div class="stats">Stats</div>
-          <div class="stats">Games Played</div>
-          <div class="stats" id="gamesPlayed">0</div>
-          <div class="stats">Attempts</div>
-          <div class="stats" id="attempts">0</div>
-          <div class="stats">Accuracy</div>
-          <div class="stats" id="accuracy">0</div>
-        </aside>
-        <main class="col-10 main" id="gameCards"></main>
+      <div class="labels">
+        <div class="stats">Costs</div>
+        <div class="stats">Revenue</div>
+        <div class="stats">Net Profit</div>
+        <div class="stats">Profitability</div>
       </div>
+      <div class="scores">
+        <div class="stats" id="cost">$1800</div>
+        <div class="stats" id="revenue">$0</div>
+        <div class="stats" id="net-profit">$0</div>
+        <div class="stats" id="profitable">0%</div>
+        <!-- <div class="stats" id="gamesPlayed"></div>
+        <div class="stats" id="attempts"></div>
+        <div class="stats" id="accuracy"></div>
+        <div class="stats" id="accuracy"></div> -->
+      </div>
+      <main class="col-11 main" id="gameCards"></main>
     </div>
     <div class="startModal">
-      <button class="startGame">START GAME</button>
+      <h4 class="instructions">Hello Chef!</h4>
+      <p class="instructions">Welcome to Café Bon Appétit.</p>
+      <p class="instructions">The head chef quit on us suddenly so we need your help!</p>
+      <p class="instructions">We already spent $1800 on ingredients to prepare for each dish! </p>
+      <p class="instructions">Match the 3 correct ingredients to learn how to create a dish on our menu. This will help us sell the dish!</p>
+      <p class="instructions">Each time you make an error, our costs will go up leading to a lower profit margin.</p>
+      <p class="instructions">Help us to achieve a profitability percentage of at least 50% and we'll hire you permanently!</p>
+      <p class="instructions">Thank you for your help! Good luck!</p>
+      <p class="instructions"></p>
+      <button class="startGame">LET'S COOK!</button>
+      <div class="start-offset"></div>
     </div>
     <div class="modal hidden">
       <h1 class="modal-text">Congratulations!</h1>

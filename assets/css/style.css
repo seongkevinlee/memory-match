@@ -1,14 +1,119 @@
 body {
   height: 97vh;
-  background-image: url("../images/lfz-background.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/restaurant-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
+.header {
+  margin: auto;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  color: rgb(255, 255, 255);
+}
+
 .title {
   font-size: 3rem;
   margin-top: 2px;
   margin-bottom: 5px;
 }
+
+
+.game {
+  height: 100%;
+}
+.labels {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1px;
+  color: white;
+}
+.scores {
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1px;
+  color: white;
+  margin-bottom: 6px;
+}
+.stats {
+  font-family: 'Amatic SC', cursive;
+  height: 14%;
+  width: 20%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 7px;
+  text-align: center;
+}
+
+
+.startModal {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tablebg.jpg");
+  background-position: left;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 83%;
+  height: 76%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  margin-top: 2.5%;
+}
+.startGame {
+  font-family: 'Amatic SC', cursive;
+  width: 19%;
+  height: 15%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.start-offset {
+  height: 2%;
+  width: 19%;
+}
+.instructions {
+  font-size: 31px;
+  line-height: 29px;
+  margin: 4px;
+}
+
+.highlightCard {
+  box-shadow: 0 0 6px 10px rgba(0, 0, 0, 0.795);
+}
+
+.main {
+  height: 68%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 7px;
+}
+.cardboard {
+  background-image: url("../images/boardonlybg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -17,7 +122,6 @@ body {
   width: 36%;
   height: 33%;
   position: fixed;
-  background-color: rgb(13, 133, 33);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,32 +138,10 @@ body {
   font-size: 2.6rem;
   color: rgb(255, 255, 255);
 }
-.startModal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36%;
-  height: 28%;
-  position: fixed;
-  background-color: rgb(13, 133, 33);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 5rem;
-  padding-top: 12px;
-  border-radius: 7px;
-  color: rgb(255, 255, 255);
-}
-.startGame {
-  width: 74%;
-  height: 72%;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  border-radius: 7px;
-  font-weight: 600;
-  font-size: 3rem;
-}
+
+
+
+
 #play-again {
   width: 27%;
   height: 17%;
@@ -68,59 +150,32 @@ body {
   border-radius: 7px;
   font-weight: 600;
 }
-.header {
-  margin: auto;
-  text-align: center;
-}
-.stats {
-  background-color: rgb(13, 133, 33);
-  height: 14%;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  font-weight: 600;
-  border-radius: 7px;
-}
+
+
 .grid-row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.game {
-  height: 100%;
-}
-.aside {
-  height: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2%;
-}
-.main {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  margin: 0 auto;
-  padding-top: 3rem;
-}
+
 .card {
-  background-image: url("../images/lfz-card.jpg");
   background-size: cover;
   background-position: center;
-  height: 33%;
+  height: 30%;
   margin-left: 0.2%;
   margin-right: 0.2%;
   margin-bottom: 1.5%;
   position: relative;
   border-radius: 7px;
 }
-.card-front,
-.card-back {
+.card:parent {
+  pointer-events: none;
+}
+.card-front > * {
+  pointer-events: none;
+}
+.card-front {
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -128,36 +183,88 @@ body {
   background-position: center;
   position: absolute;
   border-radius: 7px;
+  background-color: white;
 }
-.card-back {
-  background-image: url("../images/lfz-card.jpg");
+.card-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
 }
-.js-logo {
-  background-image: url("../images/js-logo.png");
+.card-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  display: none;
+  opacity: 0;
+  background-color: white;
 }
-.css-logo {
-  background-image: url("../images/css-logo.png");
+
+.card-front:hover .card-text-container{
+  display: flex;
+  opacity: .8;
+
 }
-.docker-logo {
-  background-image: url("../images/docker-logo.jpg");
+
+.bruschetta-bread {
+  background-image: url("../images/ingredients/bruschetta-bread.jpg");
 }
-.github-logo {
-  background-image: url("../images/gitHub-logo.png");
+.bruschetta-okra {
+  background-image: url("../images/ingredients/bruschetta-okra.jpg");
 }
-.html-logo {
-  background-image: url("../images/html-logo.png");
+.bruschetta-tomato {
+  background-image: url("../images/ingredients/bruschetta-tomato.jpg");
 }
-.mysql-logo {
-  background-image: url("../images/mysql-logo.jpg");
+.fettuccine-noodles {
+  background-image: url("../images/ingredients/fettuccine-noodles.jpg");
 }
-.node-logo {
-  background-image: url("../images/node-logo.png");
+.fettuccine-sauce {
+  background-image: url("../images/ingredients/fettuccine-sauce.jpg");
 }
-.php-logo {
-  background-image: url("../images/php-logo.jpeg");
+.fettuccine-shrimp {
+  background-image: url("../images/ingredients/fettuccine-shrimp.jpg");
 }
-.react-logo {
-  background-image: url("../images/react-logo.png");
+.salad-olives {
+  background-image: url("../images/ingredients/salad-olives.jpg");
+}
+.salad-pepperoni {
+  background-image: url("../images/ingredients/salad-pepperoni.png");
+}
+.salad-romaine {
+  background-image: url("../images/ingredients/salad-romaine.png");
+}
+.spaghetti-marinara {
+  background-image: url("../images/ingredients/spaghetti-marinara.png");
+}
+.spaghetti-meatballs {
+  background-image: url("../images/ingredients/spaghetti-meatballs.jpg");
+}
+.spaghetti-noodles {
+  background-image: url("../images/ingredients/spaghetti-noodles.jpg");
+}
+.tart-crust {
+  background-image: url("../images/ingredients/tart-crust.jpg");
+}
+.tart-peaches {
+  background-image: url("../images/ingredients/tart-peaches.jpg");
+}
+.tart-sugar {
+  background-image: url("../images/ingredients/tart-sugar.jpg");
+}
+.tiramisu-coffee {
+  background-image: url("../images/ingredients/tiramisu-coffee.jpg");
+}
+.tiramisu-ladyfingers {
+  background-image: url("../images/ingredients/tiramisu-ladyfingers.jpg");
+}
+.tiramisu-marscapone {
+  background-image: url("../images/ingredients/tiramisu-marscapone.jpg");
 }
 
 .hidden {
