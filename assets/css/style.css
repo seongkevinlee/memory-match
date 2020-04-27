@@ -198,7 +198,7 @@ body {
   background-repeat: no-repeat;
 }
 .salad-match {
-  background-image: url("../images/dishes/chopped_italian_salad.jpg");
+  background-image: url("../images/dishes/salad.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -357,8 +357,8 @@ body {
 .bruschetta-bread {
   background-image: url("../images/ingredients/bruschetta-bread.jpg");
 }
-.bruschetta-okra {
-  background-image: url("../images/ingredients/bruschetta-okra.jpg");
+.bruschetta-basil {
+  background-image: url("../images/ingredients/bruschetta-basil.jpg");
 }
 .bruschetta-tomato {
   background-image: url("../images/ingredients/bruschetta-tomato.jpg");
@@ -372,11 +372,11 @@ body {
 .fettuccine-shrimp {
   background-image: url("../images/ingredients/fettuccine-shrimp.jpg");
 }
-.salad-olives {
-  background-image: url("../images/ingredients/salad-olives.jpg");
+.salad-croutons {
+  background-image: url("../images/ingredients/salad-croutons.jpg");
 }
-.salad-pepperoni {
-  background-image: url("../images/ingredients/salad-pepperoni.png");
+.salad-parmesan {
+  background-image: url("../images/ingredients/salad-parmesan.jpg");
 }
 .salad-romaine {
   background-image: url("../images/ingredients/salad-romaine.png");
@@ -402,8 +402,8 @@ body {
 .tiramisu-coffee {
   background-image: url("../images/ingredients/tiramisu-coffee.jpg");
 }
-.tiramisu-ladyfingers {
-  background-image: url("../images/ingredients/tiramisu-ladyfingers.jpg");
+.tiramisu-ladyfingers2 {
+  background-image: url("../images/ingredients/tiramisu-ladyfingers2.jpg");
 }
 .tiramisu-marscapone {
   background-image: url("../images/ingredients/tiramisu-marscapone.jpg");
