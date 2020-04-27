@@ -11,6 +11,7 @@ var maxMatches = 9;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
+var completedMatches = 0;
 var costs = 1800;
 var revenue = 0;
 var netProfit = revenue - costs;
@@ -47,11 +48,19 @@ var cardFrontArray = [
 
 var cardFronts = document.querySelector(".card-front");
 var gameCards = document.querySelector("#gameCards");
+var cardBoxes = document.querySelector(".card")
 var startButton = document.querySelector(".startGame");
 var costText = document.querySelector('#cost');
-var revenueText = document.querySelector('#cost');
-var netProfitText = document.querySelector('#cost');
-var profitabilityText = document.querySelector('#cost');
+var revenueText = document.querySelector('#revenue');
+var netProfitText = document.querySelector('#net-profit');
+var profitabilityText = document.querySelector('#profitable');
+var wrongModal = document.querySelector('.modal-wrong');
+var bruschettaImage = document.querySelector('.bruschetta-match');
+var fettuccineImage = document.querySelector('.fettuccine-match');
+var saladImage = document.querySelector('.salad-match');
+var spaghettiImage = document.querySelector('.spaghetti-match');
+var tartImage = document.querySelector('.tart-match');
+var tiramisuImage = document.querySelector('.tiramisu-match');
 
 startButton.addEventListener("click", createCards);
 
@@ -66,16 +75,16 @@ function handleClick(event) {
 
   if (!firstCardClicked) {
     firstCardClicked = event.target;
-    firstCardClasses = firstCardClicked.className;
+    firstCardClasses = firstCardClicked.classList;
     firstCardID = firstCardClicked.id;
 
   } else if(!secondCardClicked) {
     secondCardClicked = event.target;
-    secondCardClasses = secondCardClicked.className;
+    secondCardClasses = secondCardClicked.classList;
     secondCardID = secondCardClicked.id;
   } else {
     thirdCardClicked = event.target;
-    thirdCardClasses = thirdCardClicked.className;
+    thirdCardClasses = thirdCardClicked.classList;
     thirdCardID = thirdCardClicked.id;
     gameCards.removeEventListener("click", handleClick);
     attempts++;
@@ -83,101 +92,151 @@ function handleClick(event) {
 //FIRST CARD CLICKED ID + SECOND CARD CLICKED ID + THIRD CARD CLICKED IF = ONE OF THE VALUES OF THAR DISH, THEN OUTPUT PICTURE OF DISH
 //IF
 
-    if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 6) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Bruschetta")
-    } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 306) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Fettuccine")
-    } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3006) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Salad")
-    } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 30006) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Spaghetti")
-    } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 300006) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Tart")
-    } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3000006) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      thirdCardClicked = null;
-      revenue += 1200;
-      console.log("Tiramisu")
-    } else {
-      console.log(firstCardID);
-      console.log(secondCardID);
-      console.log(thirdCardID);
-      console.log(firstCardID + secondCardID + thirdCardID);
-      highlightRemove();
-      return;
-    }
+  if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 6) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("1").remove();
+    document.getElementById("2").remove();
+    document.getElementById("3").remove();
+    completedMatches++;
+    bruschettaImage.classList.remove('hidden');
+    setTimeout(function() {
+      bruschettaImage.classList.add('hidden')
+    }, 3000);
+    console.log("Bruschetta")
+  } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 306) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("101").remove();
+    document.getElementById("102").remove();
+    document.getElementById("103").remove();
+    completedMatches++;
+    fettuccineImage.classList.remove('hidden');
+    setTimeout(function () {
+      fettuccineImage.classList.add('hidden')
+    }, 3000);
+    console.log("Fettuccine")
+  } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3006) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("1001").remove();
+    document.getElementById("1002").remove();
+    document.getElementById("1003").remove();
+    completedMatches++;
+    saladImage.classList.remove('hidden');
+    setTimeout(function () {
+      saladImage.classList.add('hidden')
+    }, 3000);
+    console.log("Salad")
+  } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 30006) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("10001").remove();
+    document.getElementById("10002").remove();
+    document.getElementById("10003").remove();
+    completedMatches++;
+    spaghettiImage.classList.remove('hidden');
+    setTimeout(function () {
+      spaghettiImage.classList.add('hidden')
+    }, 3000);
+    console.log("Spaghetti")
+  } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 300006) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("100001").remove();
+    document.getElementById("100002").remove();
+    document.getElementById("100003").remove();
+    completedMatches++;
+    tartImage.classList.remove('hidden');
+    setTimeout(function () {
+      tartImage.classList.add('hidden')
+    }, 3000);
+    console.log("Tart")
+  } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3000006) {
+    gameCards.addEventListener("click", handleClick);
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    revenue += 900;
+    netProfit += 900;
+    profitMargin = Math.trunc(netProfit / costs * 100);
+    profitabilityText.textContent = profitMargin + "%";
+    revenueText.textContent = "$" + revenue;
+    netProfitText.textContent = "$" + netProfit;
+    document.getElementById("1000001").remove();
+    document.getElementById("1000002").remove();
+    document.getElementById("1000003").remove();
+    completedMatches++;
+    tiramisuImage.classList.remove('hidden');
+    setTimeout(function () {
+      tiramisuImage.classList.add('hidden')
+    }, 3000);
+    console.log("Tiramisu");
+  } else {
+    firstCardClasses.remove('highlightCard');
+    secondCardClasses.remove('highlightCard');
+    thirdCardClasses.remove('highlightCard');
+    firstCardClicked = null;
+    secondCardClicked = null;
+    thirdCardClicked = null;
+    wrongModal.classList.remove('hidden');
+    setTimeout(function() {
+      wrongModal.classList.add('hidden')
+    }, 2000);
+    gameCards.addEventListener("click", handleClick);
+    costs += 300;
+    costText.textContent = "$" + costs;
+    netProfit -= 300;
+    netProfitText.textContent = "$" + netProfit;
+  }
 
-/*
-    if (firstCardClasses === secondCardClasses) {
-      gameCards.addEventListener("click", handleClick);
-      firstCardClicked = null;
-      secondCardClicked = null;
-      matches++;
-      if (matches === maxMatches) {
-        var modal = document.querySelector(".modal");
-        modal.classList.remove("hidden");
-      }
-    } else {
-      setTimeout(function () {
-        firstCardClicked.classList.remove("hidden");
-        secondCardClicked.classList.remove("hidden");
-        gameCards.addEventListener("click", handleClick);
-        firstCardClicked = null;
-        secondCardClicked = null;
-      }, 1500);
-    }
-    displayStats();*/
+  if(completedMatches === 6) {
+    console.log("YOU WIN!");
+  }
   }
 }
 
-function highlightRemove() {
-  for (var i = 0; i < cardFronts.length; i++) {
-    cardFronts[i].className.remove("highlightCard");
-  }
-}
 
-function displayStats() {
-  var gamesPlayedNum = document.querySelector("#gamesPlayed");
-  gamesPlayedNum.textContent = gamesPlayed;
-  var attemptsNum = document.querySelector("#attempts");
-  attemptsNum.textContent = attempts;
-  var accuracy = document.querySelector("#accuracy");
-  accuracy.textContent = calculateAccuracy(attempts, matches);
-}
-
-function calculateAccuracy(attempts, matches) {
-  if (!attempts) {
-    return "0%";
-  }
-  return Math.trunc((matches / attempts) * 100) + "%";
-}
 
 //PLAY AGAIN BUTTON
 var playAgain = document.querySelector("#play-again");
