@@ -27,7 +27,7 @@
       <div class="scores">
         <div class="stats" id="cost">$1800</div>
         <div class="stats" id="revenue">$0</div>
-        <div class="stats" id="net-profit">$0</div>
+        <div class="stats" id="net-profit">$-1800</div>
         <div class="stats" id="profitable">0%</div>
         <!-- <div class="stats" id="gamesPlayed"></div>
         <div class="stats" id="attempts"></div>
@@ -49,11 +49,39 @@
       <button class="startGame">LET'S COOK!</button>
       <div class="start-offset"></div>
     </div>
+    <div class="modal-wrong hidden">
+      <h4>I'm afraid those ingredients do not create any dish.</h4>
+      <h4>You've wasted $300 worth of ingredients!</h4>
+    </div>
     <div class="modal hidden">
       <h1 class="modal-text">Congratulations!</h1>
       <h1 class="modal-text">You have Won!</h1>
       <div class="modal-offset"></div>
       <button id="play-again">Play Again?</button>
+    </div>
+    <div class="correct bruschetta-match hidden">
+        <img src="./images/frame-bg_640.png" alt="" class="frame">
+        <p>Bruschetta</p>
+      </div>    </div>
+    <div class="correct fettuccine-match hidden">
+      <img src="./images/frame-bg_640.png" alt="" class="frame">
+      <p>Chicken Fettuccine Alfredo</p>
+    </div>
+    <div class="correct salad-match hidden">
+      <img src="./images/frame-bg_640.png" alt="" class="frame">
+      <p>Caesar Salad</p>
+    </div>
+    <div class="correct spaghetti-match hidden">
+      <img src="./images/frame-bg_640.png" alt="" class="frame">
+      <p>Spaghetti and Meatballs</p>
+    </div>
+    <div class="correct tart-match hidden">
+      <img src="./images/frame-bg_640.png" alt="" class="frame">
+      <p>Peach Tart</p>
+    </div>
+    <div class="correct tiramisu-match hidden">
+      <img src="./images/frame-bg_640.png" alt="" class="frame">
+      <p>Tiramisu</p>
     </div>
 
     <script src="js/script.js"></script>
