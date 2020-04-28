@@ -115,27 +115,26 @@ body {
 }
 
 .modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 36%;
+  font-family: 'Amatic SC', cursive;
+  width: 53%;
   height: 33%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 0;
+  line-height: 40px;
   padding-top: 2rem;
   border-radius: 7px;
   color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .modal-offset {
   padding-bottom: 11px;
 }
-.modal-text {
-  font-size: 2.6rem;
+.modal-text, modal-text1 {
+  font-size: 2.3rem;
   color: rgb(255, 255, 255);
 }
 
@@ -181,7 +180,7 @@ body {
   color: white;
 }
 .frame{
-  box-shadow: 0 0 6px 10px rgba(246, 255, 125, 0.795);
+  box-shadow: 0 0 6px 10px rgba(254, 255, 237, 0.795);
   width: 100%;
   height: 100%;
 }
@@ -192,7 +191,7 @@ body {
   background-repeat: no-repeat;
 }
 .fettuccine-match {
-  background-image: url("../images/dishes/shrimp-fettucine.jpg");
+  background-image: url("../images/dishes/fettuccine-alfredo.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -224,8 +223,8 @@ body {
 .bruschetta-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -234,8 +233,8 @@ body {
 .fettuccine-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -243,8 +242,8 @@ body {
 .salad-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -252,8 +251,8 @@ body {
 .spaghetti-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -261,8 +260,8 @@ body {
 .tart-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -270,8 +269,8 @@ body {
 .tiramisu-match > p {
   margin-block-start: 10px;
   background-color: rgb(31, 18, 18);
-  width: 100px;
-  border-radius: 7px;
+  width: 100%;
+  border-radius: 2px;
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
@@ -369,8 +368,8 @@ body {
 .fettuccine-sauce {
   background-image: url("../images/ingredients/fettuccine-sauce.jpg");
 }
-.fettuccine-shrimp {
-  background-image: url("../images/ingredients/fettuccine-shrimp.jpg");
+.fettuccine-chicken {
+  background-image: url("../images/ingredients/fettuccine-chicken.jpg");
 }
 .salad-croutons {
   background-image: url("../images/ingredients/salad-croutons.jpg");
