@@ -31,7 +31,7 @@ var cardFrontArray = [
   { class: "bruschetta-tomato", text: "Tomatoes", id: 3 },
   { class: "fettuccine-noodles", text: "Fettuccine", id: 101 },
   { class: "fettuccine-sauce", text: "Cream Sauce", id: 102 },
-  { class: "fettuccine-shrimp", text: "Shrimp", id: 103 },
+  { class: "fettuccine-chicken", text: "Chicken", id: 103 },
   { class: "salad-croutons", text: "Croutons", id: 1001 },
   { class: "salad-parmesan", text: "Parmesan Cheese", id: 1002 },
   { class: "salad-romaine", text: "Romaine", id: 1003 },
@@ -61,6 +61,8 @@ var saladImage = document.querySelector('.salad-match');
 var spaghettiImage = document.querySelector('.spaghetti-match');
 var tartImage = document.querySelector('.tart-match');
 var tiramisuImage = document.querySelector('.tiramisu-match');
+var winModal = document.querySelector('.modal');
+var winModalText = document.querySelector('.modal-text')
 
 startButton.addEventListener("click", createCards);
 
@@ -231,13 +233,17 @@ function handleClick(event) {
       if(completedMatches === 6) {
       console.log("YOU WIN!")
         if(profitMargin > 50 && profitMargin < 70) {
-          console.log('YOUR PROFITABILITY MARGIN WAS GOOD ENOUGH FOR A PART-TIME POSITION!')
+          winModalText.textContent = "YOUR PROFITABILITY MARGIN WAS GOOD ENOUGH FOR A PART-TIME POSITION!"
+          winModal.classList.remove('hidden');
         } else if(profitMargin > 70 && profitMargin < 90) {
-          console.log('YOUR PROFITABILITY MARGIN WAS GOOD ENOUGH FOR A FULL TIME POSITION!')
+          winModalText.textContent = 'YOUR PROFITABILITY MARGIN WAS GOOD ENOUGH FOR A FULL TIME POSITION!'
+          winModal.classList.remove('hidden');
         } else if(profitMargin > 90) {
-          console.log('WOW! YOUR PROFITABILITY MARGIN WAS AMAZING! WE WOULD LIKE TO OFFER YOU PART OWNERSHIP!')
+          winModalText.textContent = 'WOW! YOUR PROFITABILITY MARGIN WAS AMAZING! WE WOULD LIKE TO OFFER YOU PART OWNERSHIP!'
+          winModal.classList.remove('hidden');
         } else {
-          console.log('UNFORTUNATELY, YOUR PROFITABILITY MARGIN WAS TOO LOW TO BE OFFERED A JOB.')
+          winModalText.textContent = 'UNFORTUNATELY, YOUR PROFITABILITY MARGIN WAS TOO LOW TO BE OFFERED A JOB.'
+          winModal.classList.remove('hidden');
         }
     }
   }
