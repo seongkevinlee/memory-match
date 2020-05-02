@@ -72,6 +72,26 @@ body {
   color: rgb(255, 255, 255);
   margin-top: 2.5%;
 }
+.start-top {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.menu {
+  margin-top: 2%;
+  width: 36%;
+  height: 91%;
+}
+.instruction-container {
+width: 50%;
+height: 85%;
+margin-top: 2%;
+}
+.instructions {
+  font-size: 26px;
+  line-height: 29px;
+  margin: 4px;
+}
 .startGame {
   font-family: 'Amatic SC', cursive;
   width: 19%;
@@ -86,11 +106,7 @@ body {
   height: 2%;
   width: 19%;
 }
-.instructions {
-  font-size: 31px;
-  line-height: 29px;
-  margin: 4px;
-}
+
 
 .highlightCard {
   box-shadow: 0 0 6px 10px rgba(0, 0, 0, 0.795);
