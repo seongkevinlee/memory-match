@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/media.css" /> -->
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
 
@@ -29,23 +29,24 @@
         <div class="stats" id="revenue">$0</div>
         <div class="stats" id="net-profit">$-1800</div>
         <div class="stats" id="profitable">0%</div>
-        <!-- <div class="stats" id="gamesPlayed"></div>
-        <div class="stats" id="attempts"></div>
-        <div class="stats" id="accuracy"></div>
-        <div class="stats" id="accuracy"></div> -->
       </div>
       <main class="col-11 main" id="gameCards"></main>
     </div>
     <div class="startModal">
-      <h4 class="instructions">Hello Chef!</h4>
-      <p class="instructions">Welcome to Café Bon Appétit.</p>
-      <p class="instructions">The head chef quit on us suddenly so we need your help!</p>
-      <p class="instructions">We already spent $1800 on ingredients to prepare for each dish! </p>
-      <p class="instructions">Match the 3 correct ingredients to learn how to create a dish on our menu. This will help us sell the dish!</p>
-      <p class="instructions">Each time you make an error, our costs will go up leading to a lower profit margin.</p>
-      <p class="instructions">Help us to achieve a profitability percentage of at least 50% and we'll hire you permanently!</p>
-      <p class="instructions">Thank you for your help! Good luck!</p>
-      <p class="instructions"></p>
+      <div class="start-top">
+        <img src="./images/menu.png" alt="menu" class="menu">
+        <div class="instruction-container">
+          <h4 class="instructions">Hello Chef!</h4>
+          <p class="instructions">Welcome to Café Bon Appétit.</p>
+          <p class="instructions">The head chef quit on us suddenly so we need your help!</p>
+          <p class="instructions">Help us to create the 6 dishes we have on our menu by matching the 3 ingredients required for each dish. </p>
+          <p class="instructions">Making an error will increase costs!</p>
+          <p class="instructions">Help us to achieve a profitability percentage of at least 50% and we'll hire you permanently!</p>
+          <p class="instructions">Thank you for your help!</p>
+          <p class="instructions">Good luck!</p>
+          <p class="instructions"></p>
+        </div>
+      </div>
       <button class="startGame">LET'S COOK!</button>
       <div class="start-offset"></div>
     </div>

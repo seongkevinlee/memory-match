@@ -1,13 +1,13 @@
 @media only screen and (min-width: 320px) {
   .card {
-    height: 12%;
+    height: 15%;
     width: 25%;
   }
   .stats {
     height: 9%;
     margin-top: 6px;
     margin-bottom: 6px;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 600;
     text-align: center;
     border-radius: 7px;
@@ -22,153 +22,117 @@
     height: 92%;
   }
   .startModal {
-    width: 48%;
-    height: 28%;
+    width: 94%;
+    height: 55%;
     padding-top: 8px;
   }
   .startGame {
-    width: 83%;
-    height: 72%;
-    font-size: 1.5rem;
+    width: 26%;
+    height: 9%;
+    font-size: 1rem;
+  }
+  .instructions {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .instruction-container {
+    margin-top: 4%;
+  }
+  .menu {
+    width: 35%;
+    height: 90%;
+  }
+  .modal-wrong {
+    font-size: 1.2rem;
+    line-height: 25px;
+    padding-top: 44px;
+  }
+  .card-text {
+    font-size: .7rem;
+  }
+  .correct {
+    width: 265px;
+    height: 176px;
   }
 }
 @media only screen and (min-width: 375px) {
-  .card {
-    height: 15%;
-    width: 28%;
+  .instructions {
+    font-size: 15px;
+    line-height: 15px;
   }
-  .stats {
-    height: 10%;
-    margin-top: 13px;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 7px;
+  .menu {
+    width: 41%;
+    height: 90%;
   }
-  .main {
-    padding-top: 1rem;
-  }
-  .title {
-    font-size: 1.8rem;
-  }
-  .game {
-    height: 93%;
+  .modal-wrong {
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 568px) {
   .card {
-    height: 26%;
+    height: 29%;
     width: 15%;
   }
-  .stats {
-    height: 9%;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 7px;
-  }
   .main {
-    padding-top: 1rem;
-  }
-  .title {
-    font-size: 1.5rem;
-  }
-  .game {
-    height: 90%;
+    height: 52%;
   }
   .startModal {
-    width: 42%;
-    height: 33%;
-    padding-top: 4px;
+    height: 74%;
   }
   .startGame {
-    width: 83%;
-    height: 72%;
-    font-size: 1.5rem;
+    width: 16%;
+    height: 11%;
+  }
+  .instructions {
+    font-size: 16px;
+  }
+  .instruction-container {
+    margin-top: 1%;
+  }
+  .menu {
+    width: 26%;
+  }
+  .modal-wrong {
+    font-size: 1.3rem;
+    height: 32%;
   }
 }
 @media screen and (min-width: 667px) {
-  .card {
-    height: 26%;
-    width: 15%;
-  }
-  .stats {
-    height: 9%;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 7px;
-  }
-  .main {
-    padding-top: 1rem;
-  }
   .title {
     font-size: 1.5rem;
   }
-  .game {
-    height: 93 %;
+  .startModal {
+    width: 94%;
+    height: 74%;
+    padding-top: 8px;
+  }
+  .startGame {
+    width: 16%;
+    height: 11%;
+    font-size: 1rem;
+  }
+  .instructions {
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .instruction-container {
+    margin-top: 1%;
+  }
+  .menu {
+    width: 26%;
+    height: 90%;
   }
 }
 @media screen and (min-width: 768px) {
   .card {
-    height: 15%;
-    width: 25%;
+    height: 29%;
+    width: 15%;
   }
-  .stats {
-    height: 12%;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 7px;
-  }
-  .main {
-    padding-top: 2rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-  .game {
-    height: 93%;
-  }
-  .startModal {
-    width: 48%;
-    height: 28%;
-    padding-top: 12px;
-  }
-  .startGame {
-    width: 83%;
-    height: 72%;
-    font-size: 2.5rem;
-  }
+
 }
 @media screen and (min-width: 1024px) {
   .card {
     height: 26%;
     width: 15%;
-  }
-  .stats {
-    height: 12%;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 27px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 7px;
-  }
-  .main {
-    padding-top: 4rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-  .game {
-    height: 83%;
   }
 }

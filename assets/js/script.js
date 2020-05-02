@@ -63,6 +63,7 @@ var tartImage = document.querySelector('.tart-match');
 var tiramisuImage = document.querySelector('.tiramisu-match');
 var winModal = document.querySelector('.modal');
 var winModalText = document.querySelector('.modal-text')
+var startModal = document.querySelector('.startModal');
 
 startButton.addEventListener("click", createCards);
 
@@ -71,15 +72,16 @@ function handleClick(event) {
   if (event.target.className.indexOf("highlightCard") !== -1) {
     return;
   }
-  event.target.classList.add("highlightCard");
- // highlightClick();
-  console.log(event);
+  if (event.target.classList.contains("card-front")){
+    event.target.classList.add("highlightCard");
+  } else {
+    return;
+  }
 
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.classList;
     firstCardID = firstCardClicked.id;
-
   } else if(!secondCardClicked) {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.classList;
@@ -255,33 +257,16 @@ function handleClick(event) {
 var playAgain = document.querySelector("#play-again");
 playAgain.addEventListener("click", resetGame);
 
-//HIGHLIGHT THE CARD THAT IS CLICKED
-function highlightClick (event) {
-  if(event.className.split(' ').includes("main")){
-    console.log(event);
-    return
-  } else {
-    event.target.classList.add("highlightCard");
-    console.log(event);
-  }
-
-}
-
 function resetGame() {
-  matches = 0;
-  attempts = 0;
-  gamesPlayed++;
-  displayStats();
-  resetCards();
-  document.querySelector(".modal").classList.add("hidden");
-}
-
-function resetCards() {
-  shuffleCards();
-  displayCards();
-  var hiddenCards = document.querySelectorAll(".card-back");
-  for (var i = 0; i < hiddenCards.length; i++) {
-    hiddenCards[i].classList.remove("hidden");
+  costs = 1800;
+  revenue = 0;
+  profitabilityText.textContent =  "0%";
+  revenueText.textContent = "$" + revenue;
+  netProfitText.textContent = "$0";
+  winModal.classList.add("hidden");
+  startModal.classList.remove("hidden");
+  while(gameCards.hasChildNodes()) {
+    gameCards.removeChild(gameCards.firstChild);
   }
 }
 
@@ -295,11 +280,9 @@ function shuffleCards() {
   }
 }
 
-
-
 function createCards() {
   gameCards.classList.add("cardboard");
-  document.querySelector(".startModal").classList.add("hidden");
+  startModal.classList.add("hidden");
   shuffleCards();
   for (var i = 0; i < maxMatches * 2; i++) {
     var cardContainer = document.createElement("div");
