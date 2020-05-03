@@ -15,7 +15,7 @@ var completedMatches = 0;
 var costs = 1800;
 var revenue = 0;
 var netProfit = revenue - costs;
-var profitMargin = netProfit / costs;
+var profitMargin = 0;
 var dishID = 0;
 var bruschettaID = 6;
 var fettuccineID = 306;
@@ -66,6 +66,9 @@ var winModalText = document.querySelector('.modal-text')
 var startModal = document.querySelector('.startModal');
 
 startButton.addEventListener("click", createCards);
+startButton.addEventListener('click', function () { bgMusic.play() })
+gameCards.addEventListener('click', function () { clickSound.play() })
+
 
 gameCards.addEventListener("click", handleClick);
 function handleClick(event) {
@@ -94,12 +97,13 @@ function handleClick(event) {
     attempts++;
 
     if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 6) {
+      chopping.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -114,12 +118,13 @@ function handleClick(event) {
       }, 3000);
       console.log("Bruschetta")
     } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 306) {
+      kitchenSound.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -134,12 +139,13 @@ function handleClick(event) {
       }, 3000);
       console.log("Fettuccine")
     } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3006) {
+      chopping.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -154,12 +160,13 @@ function handleClick(event) {
       }, 3000);
       console.log("Salad")
     } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 30006) {
+      kitchenSound.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -174,12 +181,13 @@ function handleClick(event) {
       }, 3000);
       console.log("Spaghetti")
     } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 300006) {
+      oven.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -194,12 +202,13 @@ function handleClick(event) {
       }, 3000);
       console.log("Tart")
     } else if (Number(firstCardID) + Number(secondCardID) + Number(thirdCardID) === 3000006) {
+      oven.play();
       gameCards.addEventListener("click", handleClick);
       firstCardClicked = null;
       secondCardClicked = null;
       thirdCardClicked = null;
-      revenue += 900;
-      netProfit += 900;
+      revenue += 600;
+      netProfit += 600;
       profitMargin = Math.trunc(netProfit / costs * 100);
       profitabilityText.textContent = profitMargin + "%";
       revenueText.textContent = "$" + revenue;
@@ -214,6 +223,7 @@ function handleClick(event) {
       }, 3000);
       console.log("Tiramisu");
     } else {
+      wrongSound.play();
       firstCardClasses.remove('highlightCard');
       secondCardClasses.remove('highlightCard');
       thirdCardClasses.remove('highlightCard');
@@ -229,6 +239,8 @@ function handleClick(event) {
       costText.textContent = "$" + costs;
       netProfit -= 300;
       netProfitText.textContent = "$" + netProfit;
+      profitMargin = Math.trunc(netProfit / costs * 100);
+      profitabilityText.textContent = profitMargin + "%";
       console.log(netProfit);
       }
 
@@ -244,7 +256,7 @@ function handleClick(event) {
           winModalText.textContent = 'WOW! YOUR PROFITABILITY MARGIN WAS AMAZING! WE WOULD LIKE TO OFFER YOU PART OWNERSHIP!'
           winModal.classList.remove('hidden');
         } else {
-          winModalText.textContent = 'UNFORTUNATELY, YOUR PROFITABILITY MARGIN WAS TOO LOW TO BE OFFERED A JOB.'
+          winModalText.textContent = 'UNFORTUNATELY, YOUR PROFITABILITY MARGIN WAS TOO LOW TO BE OFFERED A JOB. TRY AGAIN.'
           winModal.classList.remove('hidden');
         }
     }
@@ -258,6 +270,11 @@ var playAgain = document.querySelector("#play-again");
 playAgain.addEventListener("click", resetGame);
 
 function resetGame() {
+  completedMatches = 0;
+  firstCardID = 0;
+  secondCardID = 0;
+  thirdsCardID = 0;
+  netProfit = -1800;
   costs = 1800;
   revenue = 0;
   profitabilityText.textContent =  "0%";
@@ -316,3 +333,30 @@ function createCardTextContainer() {
   cardTextContain.classList.add("card-text-container");
   return cardTextContain;
 }
+
+// const rollSound = new Audio("./assets/audio/ONEDICE.WAV");
+// cardFronts.addEventListener("click", e => rollSound.play());
+/*--------- Audio ---------*/
+var bgMusic = new Audio();
+bgMusic.src = '../assets/audio/bgmusic.mp3';
+bgMusic.volume = 0.2;
+
+var clickSound = new Audio();
+clickSound.src = '../assets/audio/knifechop.mp3';
+clickSound.volume = 0.2;
+
+var wrongSound = new Audio();
+wrongSound.src = '../assets/audio/wrong.mp3';
+wrongSound.volume = 0.2;
+
+var kitchenSound = new Audio();
+kitchenSound.src = '../assets/audio/kitchensound.mp3';
+kitchenSound.volume = 0.1;
+
+var chopping = new Audio();
+chopping.src = '../assets/audio/chopping.mp3';
+chopping.volume = 0.4;
+
+var oven = new Audio();
+oven.src = '../assets/audio/oven.mp3';
+oven.volume = 0.3;
