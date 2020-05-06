@@ -125,14 +125,97 @@
 }
 @media screen and (min-width: 768px) {
   .card {
-    height: 29%;
-    width: 15%;
+    height: 15.5%;
+    width: 29%;
   }
-
+  .title {
+    font-size: 3rem;
+  }
+  .startModal {
+    width: 87%;
+    height: 54%;
+    padding-top: 8px;
+  }
+  .startGame {
+    width: 16%;
+    height: 11%;
+    font-size: 1rem;
+  }
+  .instructions {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .instruction-container {
+    margin-top: 1%;
+  }
+  .menu {
+    width: 33%;
+    height: 90%;
+  }
+  .main {
+    height: 82%;
+  }
+    .modal-wrong {
+    font-size: 1.3rem;
+    height: 10%;
+  }
+    .stats {
+    font-size: 20px;
+  }
+    .card-text {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .card {
-    height: 26%;
+    height: 32%;
     width: 15%;
   }
+    .main {
+    height: 78%;
+  }
+    .startModal {
+    width: 87%;
+    height: 71%;
+    padding-top: 8px;
+  }
+    .menu {
+    width: 36%;
+    height: 85%;
 }
+  .instructions {
+    font-size: 27px;
+    line-height: 31px;
+  }
+    .title {
+    font-size: 2.5rem;
+  }
+@media screen and (min-width: 1366px) {
+  .card {
+    height: 32%;
+    width: 15%;
+  }
+    .main {
+    height: 78%;
+  }
+    .startModal {
+    width: 87%;
+    height: 71%;
+    padding-top: 8px;
+  }
+    .menu {
+    width: 23%;
+    height: 85%;
+}
+  .instructions {
+    font-size: 35px;
+    line-height: 32px;
+  }
+    .title {
+    font-size: 2.5rem;
+  }
+    .startGame {
+    width: 16%;
+    height: 11%;
+    font-size: 1.5rem;
+  }
